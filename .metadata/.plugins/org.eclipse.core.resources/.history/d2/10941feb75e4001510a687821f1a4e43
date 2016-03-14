@@ -1,0 +1,34 @@
+package layoutMadness;
+
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class MyFrame extends JFrame {
+
+	private JButton btnConfirm = new JButton("Confirm");
+	private JButton btnCancel = new JButton("Cancel");
+	private JTextField textField = new JTextField();
+
+	public MyFrame(String title) {
+		super(title);
+		
+		JPanel grid = new JPanel(new Gridlayout(3,2));
+		JPanel top = new JPanel(new BorderLayout());
+		JPanel buttons = new JPanel(new GridLayout(1,2));
+		JPanel main = new JPanel(new BorderLayout());
+		top.add(textField);
+		buttons.add(btnCancel);
+		buttons.add(btnConfirm);
+		main.add(grid, BorderLayout.NORTH);
+		main.add(top, BorderLayout.CENTER);
+		main.add(buttons, BorderLayout.SOUTH);
+		
+		getContentPane().add(main);
+	}
+
+}

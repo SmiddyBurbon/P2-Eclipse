@@ -1,0 +1,27 @@
+package layoutMadness;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class MyFrame extends JFrame {
+
+	private JButton btnConfirm = new JButton("Confirm");
+	private JButton btnCancel = new JButton("Cancel");
+	private JTextField textField = new JTextField();
+
+	public MyFrame(String title) {
+		super(title);
+		
+		JPanel top = new JPanel(new BorderLayout());
+		JPanel bottom = new JPanel(new FlowLayout());
+		top.add(textField);
+		bottom.add(btnCancel);
+		bottom.add(btnConfirm);
+	}
+
+}

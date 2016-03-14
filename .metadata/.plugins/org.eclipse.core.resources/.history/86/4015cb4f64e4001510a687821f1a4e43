@@ -1,0 +1,11 @@
+package MyFirstFrame;
+
+import javax.swing.JFrame;
+
+public class MyFirstFrame {
+	public static voic main(String[] args) {
+		Jframe frame = new JFrame("Meine erste Gui-App");
+		frame.setVisible(true);
+		frame.setSize(200, 200);
+	}
+}

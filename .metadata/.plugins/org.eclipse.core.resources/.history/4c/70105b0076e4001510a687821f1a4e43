@@ -1,0 +1,48 @@
+package layoutMadness;
+
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class MyFrame extends JFrame {
+
+	private JButton btnConfirm = new JButton("Confirm");
+	private JButton btnCancel = new JButton("Cancel");
+	private JTextField textField = new JTextField();
+	
+	private JButton btn1 = new JButton("1");
+	private JButton btn2 = new JButton("2");
+	private JButton btn3 = new JButton("3");
+	private JButton btn4 = new JButton("4");
+	private JButton btn5 = new JButton("5");
+	private JButton btn6 = new JButton("6");
+
+	public MyFrame(String title) {
+		super(title);
+		
+		JPanel grid = new JPanel(new Gridlayout(3,2));
+		JPanel top = new JPanel(new BorderLayout());
+		JPanel buttons = new JPanel(new GridLayout(1,2));
+		JPanel main = new JPanel(new BorderLayout());
+		
+		grid.add(btn1);
+		grid.add(btn2);
+		grid.add(btn3);
+		grid.add(btn4);
+		grid.add(btn5);
+		grid.add(btn6);
+		top.add(textField);
+		buttons.add(btnCancel);
+		buttons.add(btnConfirm);
+		main.add(grid, BorderLayout.NORTH);
+		main.add(top, BorderLayout.CENTER);
+		main.add(buttons, BorderLayout.SOUTH);
+		
+		getContentPane().add(main);
+	}
+
+}

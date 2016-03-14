@@ -1,0 +1,10 @@
+package gridLayout;
+
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Layout extends JFrame {
+	setLayout(new GridLayout(numRows, numCols));
+}

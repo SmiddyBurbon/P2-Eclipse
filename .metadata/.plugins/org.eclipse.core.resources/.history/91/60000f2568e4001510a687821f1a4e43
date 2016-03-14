@@ -1,0 +1,13 @@
+package gridLayout;
+
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Layout {
+	private int numRows = 3;
+	private int numCols = 2;
+	
+	setLayout(new GridLayout(numRows, numCols));
+}

@@ -1,0 +1,21 @@
+package layoutMadness;
+
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class MyFrame extends JFrame {
+
+	private JButton btnConfirm = new JButton("Confirm");
+	private JButton btnCancel = new JButton("Cancel");
+
+	public MyFrame(String title) {
+		super(title);
+		
+		setLayout(new GridLayout(3, 2));
+		// Button hinzufügen
+		add(btnConfirm);
+	}
+
+}

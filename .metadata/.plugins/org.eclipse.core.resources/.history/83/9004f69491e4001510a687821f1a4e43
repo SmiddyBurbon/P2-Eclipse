@@ -1,0 +1,36 @@
+package v1;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class Aufg3 extends JFrame {
+	private JButton north = new JButton("North");
+	private JButton south = new JButton("South");
+	private JButton east = new JButton("East");
+	private JButton west = new JButton("West");
+	private JButton center = new JButton("Center");
+	
+	public Aufg3(String title) {
+		super(title);
+		
+		setLayout(new BorderLayout());
+		add(north, BorderLayout.NORTH);
+		add(south, BorderLayout.SOUTH);
+		add(east, BorderLayout.EAST);
+		add(west, BorderLayout.WEST);
+		add(center, BorderLayout.CENTER);
+	}
+	
+	public static void main(String[] args) {
+		JFrame frame = new Aufg3("BorderLayout");
+		frame.setSize(300,200);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}

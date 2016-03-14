@@ -1,0 +1,22 @@
+package layoutMadness;
+
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class MyFrame extends JFrame {
+
+	private JButton btnConfirm = new JButton("Confirm");
+	private JButton btnCancel = new JButton("Cancel");
+
+	public MyFrame(String title) {
+		super(title);
+		
+		setLayout(new FlowLayout());
+		// Button hinzufügen
+		add(btnCancel);
+		add(btnConfirm);
+	}
+
+}

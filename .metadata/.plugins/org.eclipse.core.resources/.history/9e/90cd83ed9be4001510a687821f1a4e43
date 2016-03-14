@@ -1,0 +1,39 @@
+package v1;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import java.util.ArrayList;
+
+import javax.swing.Box;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
+import javax.swing.JTextField;
+
+public class Aufg8 extends JFrame {
+	private JLabel labelPlayMode = new JLabel("Play Mode");
+	private JLabel labelPlayer1 = new JLabel("Player 1");
+	private JLabel labelPlayer2 = new JLabel("Player 2");
+	private JLabel labelDifficulty = new JLabel("Difficulty");
+	
+	private String[] playModes = {"Local 1v1", "Local 1vAI", "Network Game (Server Mode)", "Network Game (Client Mode)"}
+	private JComboBox boxPlayMode = new JComboBox(playModes);
+	
+	public Aufg8(String title) {
+		super(title);
+		
+		
+	}
+
+	public static void main(String[] args) {
+		JFrame frame = new Aufg8("BorderLayout");
+		frame.setSize(320,320);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}

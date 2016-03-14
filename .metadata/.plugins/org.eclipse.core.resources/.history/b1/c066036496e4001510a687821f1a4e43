@@ -1,0 +1,27 @@
+package v1;
+
+import java.awt.GridLayout;
+import java.util.ArrayList;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Aufg4 extends JFrame {
+	private ArrayList<JButton> buttons = new ArrayList<JButton>();
+	buttons.add("7");
+	
+	public Aufg4(String title) {
+		super(title);
+		JPanel grid = new JPanel(new GridLayout(4,4));
+		
+		add(grid);
+	}
+
+	public static void main(String[] args) {
+		JFrame frame = new Aufg4("Calculator");
+		frame.setSize(320,160);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}
